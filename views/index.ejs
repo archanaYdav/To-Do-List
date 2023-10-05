@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+    <main class="main">
+        <div class="to-do-list">
+            <div class="sticky">
+                <h1 class="margin-bt "><%= listTitle %> 📝</h1>
+                <form class="add-list margin-bt " action="/" method="POST">
+                    <input type="text" placeholder="What you want to add" class="task" name="task">
+                    <button class="btn" type="submit" value="<%= listTitle %>" name="list">Add</button>
+                </form>
+            </div>
+            <ul class="worksToBeDone">
+                <% for(let i=0; i<newListItems.length; i++){ %>
+                    <form action="/delete" method="POST">
+                        <div class="item">
+                            <input type="checkbox" name="checkbox" value="<%= newListItems[i]._id%>" onchange="this.form.submit()">
+                            <p>
+                                <%= newListItems[i].name %>
+                            </p>
+                            <input type="hidden" value="<%= listTitle %>" name="listName">
+                        </div>
+                    </form>
+                    <% } %>
+            </ul>
+        </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %>

@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+body {
+    padding: 27px;
+    min-height: 100vh;
+    background-color: #E4E9FD;
+    /* background-color: #f5c7c3ea; */
+}
+
+.navbar {
+    margin-right: 21px;
+    margin-bottom: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navbar a {
+    display: inline;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-list {
+    overflow-y: auto;
+    border-radius: 20px;
+    width: 500px;
+    height: 570px;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2),
+        5px 5px 10px rgba(75, 41, 41, 0.2) inset,
+        0 0 40px rgba(255, 255, 255, 0.2) inset;
+    padding: 30px;
+}
+
+
+.margin-bt {
+    margin-bottom: 20px;
+}
+
+
+.add-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 30px;
+    background: #edeef0;
+}
+
+.add-list input {
+    flex: 1;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+
+.add-list button {
+    padding: 16px 40px;
+    background: #ff5949;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+  }
+
+  input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #555;
+    color: #555;
+  }
+
+  input[type="checkbox"] {
+    margin: 20px;
+    font-size: 30px;
+  }
+
+  .item p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(26, 24, 24);
+  }
+
+  footer{
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .sticky {
+    padding: 5px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
