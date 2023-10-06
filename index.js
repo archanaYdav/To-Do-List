@@ -4,9 +4,10 @@ import mongoose from "mongoose";
 import _ from 'lodash';
 const app = express();
 const port = 3000;
+import 'dotenv/config';
 
 //this is the Todp db
-mongoose.connect('mongodb://127.0.0.1:27017/todoListDB');
+mongoose.connect(process.env.MONGODB_CONNECT_URI);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
